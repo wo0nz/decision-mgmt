@@ -1,0 +1,61 @@
+Provide a brief description of the dataset to include the number of cases, description of the inputs, description of the variable that could be used to develop predictive models, etc. 
+
+Number of cases: 
+Inputs:
+- 
+Variables:
+- data
+- price
+- bedrooms
+- bathrooms
+- sqft_living
+- sqft_lot
+- floors
+- waterfront
+- view
+- condition
+- sqft_above
+- sqft_basement
+- yr_built
+- yr_renovated
+- street address
+- city
+- statezip
+- country
+
+Explore the dataset:
+1. Initial set of questions
+-
+"Commercial companies that work in the real estate field has started using big data solutions to reduce their fincancial risks." 
+What financial risk mitigation inference is possible with this dataset?  
+
+
+2. Provide insights gained from using Cognos Analytics
+(Outliers?, Missing variables for some cases? Irrelevant variables?)
+Recommended solutions:
+
+How does Cognos Analytics provide assistance?
+
+
+An initial and critical step in any data analysis and machine learning project is wrangling and cleaning of the data. 
+
+Outliers in real estate data could be due to a number of reasons. For example, erroneous data formats, bad default values, typographical errors during data entry etc. can lead to outliers. Plotting the distribution of numeric columns can give a sense of outliers in the data set.
+
+
+3. New specific questions which provide additional insights into and answer specific questions from the dataset. Discuss how these insights could be useful. Discuss how you would improve relevancy.
+
+
+4. Develop and explain at least five different visualizations (experiment with the available options and summarize the results ( what do they show ): 
+
+
+5. Utilize features (e.g., filters, comparisions) with the visualizations to uncover and explain interesting aspects of the dataset.
+
+
+
+6. Create and expalin at least one insightful calculation. Discuss why this would be useful.
+
+
+References:
+https://born2invest.com/articles/big-data-game-changer-real-estate/
+https://medium.com/geoai/house-hunting-the-data-scientist-way-b32d93f5a42f
+
