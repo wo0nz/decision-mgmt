@@ -1,51 +1,29 @@
 Provide a brief description of the dataset to include the number of cases, description of the inputs, description of the variable that could be used to develop predictive models, etc. 
 
-Number of cases: 
-Inputs:
-- 
-Variables:
-- data
-- price
-- bedrooms
-- bathrooms
-- sqft_living
-- sqft_lot
-- floors
-- waterfront
-- view
-- condition
-- sqft_above
-- sqft_basement
-- yr_built
-- yr_renovated
-- street address
-- city
-- statezip
-- country
 
 Explore the dataset:
-1. Initial set of questions
--
-"Commercial companies that work in the real estate field has started using big data solutions to reduce their fincancial risks." 
-What financial risk mitigation inference is possible with this dataset?  
-
-
 2. Provide insights gained from using Cognos Analytics
 (Outliers?, Missing variables for some cases? Irrelevant variables?)
 Recommended solutions:
 
-How does Cognos Analytics provide assistance?
+It is crutial to wrangle and clean the dataset. This initial step can help with identifying outliers in the dataset. Cognos Analytics provide useful tools to aid in exposing outliers. One method is to plot the distribution of numeric columns. Specifically for the HousePrice dataset, we created a plot that grouped the square footage column into 5 groups and summarized its count in the y-axis. See Figure 2 in Appendix A. The outliers in terms of square footage made up less than 1% of our data. There were 40 items of the sqft_lot group with numeric values exceeding 215,354 square feet. Outliers could be due to a number of reasons such as erroneous data formats, bad default values, typographical errors during data entry etc. () In addition to outliers, there may be cases where missing variables limit the capability and accuracy of our analysis. There are typically three types of missing data: 
+1. Missing at Random (MAR),
+2. Missing Completely at Random (MCAR), and
+3. Missing not at Random (MNAR).
 
+Missing at Random is when the data is only missing within a subset of the dataset and Missing Completely at Random implies missing data across all observations. When the missing data has structure to it, it is not considered random. Depending on the type of missing data, there are different strategies for handing such as deletion and imputation. () We can look for missing data by using a linear plot with each feature column vs the date feature. Figure 3 in Appendix A shows a linear plot for price vs date where we're summarizing the count for price in the y-axis. It appears that we don't have any MAR or MCAR types of missing data. 
 
-An initial and critical step in any data analysis and machine learning project is wrangling and cleaning of the data. 
+An interesting case could be to focus on determining if the localized market is suitable for buyers vs sellers. In the HousePrice dataset, we find that reasonable features such as number of days on the market along with accurate entry date logging is missing. In this example, the missing feature would be considered MNAR. This dataset may not be suitable for determining market culture. 
 
-Outliers in real estate data could be due to a number of reasons. For example, erroneous data formats, bad default values, typographical errors during data entry etc. can lead to outliers. Plotting the distribution of numeric columns can give a sense of outliers in the data set.
+Generally, we can ignore irrelevant variables that may clutter or misrepresent the visualizations. Cognos Analytics can map the relationships between the features in the dataset. See Figure 3 in Appendix A. We can expose irrelevant variables from the unconnected nodes in the relationship graph. When price is parent feature, we can see that date, street, year built, and country are missing; therefore, these are irrelevant to price. 
 
 
 3. New specific questions which provide additional insights into and answer specific questions from the dataset. Discuss how these insights could be useful. Discuss how you would improve relevancy.
 
-
-4. Develop and explain at least five different visualizations (experiment with the available options and summarize the results ( what do they show ): 
+1. Which homes may be overvalued or undervalued?
+This insight is useful for real estate investment purposes where a buyer would typically aim to purchase an undervalued home and a seller would get a better estimate for a target selling price.  
+2. Which home amenity dominates the overall price of the home?
+3. Where are the oldest homes located and is there a corollation with number of renovated homes in that same area?
 
 
 5. Utilize features (e.g., filters, comparisions) with the visualizations to uncover and explain interesting aspects of the dataset.
@@ -54,8 +32,12 @@ Outliers in real estate data could be due to a number of reasons. For example, e
 
 6. Create and expalin at least one insightful calculation. Discuss why this would be useful.
 
+In Figure 6, the average price of homes with a waterfront ($1,451,621.21) is compared to the average price of homes without a waterfront ($515,926.98). However, the HousePrice dataset only contained 33 homes with waterfronts out of 4,600 homes. As expected, homes with a waterfront are uncommon and are on average 3 times the cost of homes without a waterfront view. Average prices of homes with other various levels of views are also shown. This is especially useful information for real estate investors because it shows a positive corollation between price and the view feature.  
+
 
 References:
 https://born2invest.com/articles/big-data-game-changer-real-estate/
 https://medium.com/geoai/house-hunting-the-data-scientist-way-b32d93f5a42f
+https://towardsdatascience.com/how-to-handle-missing-data-8646b18db0d4
+
 
